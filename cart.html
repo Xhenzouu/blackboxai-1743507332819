@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - ShopEasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .cart-item:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+    <script src="scripts.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">ShopEasy</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                        <a href="products.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Products</a>
+                        <a href="track.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Track Order</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="cart.html" class="py-2 px-2 font-medium text-blue-500 rounded hover:bg-gray-100 transition duration-300 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <a href="#" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-8">Your Shopping Cart</h1>
+        
+        <div class="lg:grid lg:grid-cols-12 lg:gap-x-12">
+            <!-- Cart Items -->
+            <div class="lg:col-span-8">
+                <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                    <div id="cart-items" class="divide-y divide-gray-200">
+                        <!-- Cart items will be dynamically inserted here -->
+                        <div class="p-6 text-center text-gray-500" id="empty-cart-message">
+                            Your cart is empty. <a href="products.html" class="text-blue-500 hover:text-blue-600">Continue shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="lg:col-span-4 mt-8 lg:mt-0">
+                <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                    <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                            Order Summary
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between text-base font-medium text-gray-900 mb-4">
+                            <p>Subtotal</p>
+                            <p id="cart-subtotal">$0.00</p>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <p>Shipping</p>
+                            <p>Calculated at checkout</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4 flex justify-between text-base font-medium text-gray-900">
+                            <p>Total</p>
+                            <p id="cart-total">$0.00</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="checkout.html" class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                                Checkout
+                            </a>
+                        </div>
+                        <div class="mt-6 flex justify-center text-sm text-gray-500">
+                            <p>
+                                or <a href="products.html" class="text-blue-600 font-medium hover:text-blue-500">Continue Shopping<span aria-hidden="true"> &rarr;</span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ShopEasy</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your needs with fast delivery.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="track.html" class="text-gray-400 hover:text-white">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartDisplay();
+            
+            function updateCartDisplay() {
+                const cartItemsContainer = document.getElementById('cart-items');
+                const emptyCartMessage = document.getElementById('empty-cart-message');
+                const cartSubtotal = document.getElementById('cart-subtotal');
+                const cartTotal = document.getElementById('cart-total');
+                
+                // Clear existing items
+                while (cartItemsContainer.firstChild && cartItemsContainer.firstChild.id !== 'empty-cart-message') {
+                    cartItemsContainer.removeChild(cartItemsContainer.firstChild);
+                }
+                
+                // Load cart from localStorage
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                    cartSubtotal.textContent = '$0.00';
+                    cartTotal.textContent = '$0.00';
+                    return;
+                }
+                
+                emptyCartMessage.style.display = 'none';
+                
+                // Calculate subtotal
+                let subtotal = 0;
+                
+                // Add each item to the cart display
+                cart.forEach((item, index) => {
+                    subtotal += item.price;
+                    
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'p-6 cart-item transition duration-150 ease-in-out';
+                    cartItem.innerHTML = `
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <img src="${item.image}" alt="${item.name}" class="w-20 h-20 rounded-md object-cover object-center">
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between text-base font-medium text-gray-900">
+                                    <h3>${item.name}</h3>
+                                    <p class="ml-4">$${item.price.toFixed(2)}</p>
+                                </div>
+                                <p class="mt-1 text-sm text-gray-500">${item.category}</p>
+                            </div>
+                            <div class="ml-4">
+                                <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    
+                    cartItemsContainer.insertBefore(cartItem, emptyCartMessage);
+                });
+                
+                // Update totals
+                cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+                cartTotal.textContent = `$${subtotal.toFixed(2)}`;
+            }
+            
+            window.removeFromCart = function(index) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartDisplay();
+            };
+        });
+    </script>
+</body>
+</html>
