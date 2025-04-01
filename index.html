@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Online Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">ShopEasy</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold">Home</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Products</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="cart.html" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                    <a href="#" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-blue-700 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-blue-700 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <div class="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+                    <div class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="sm:text-center lg:text-left">
+                            <h2 class="my-6 text-4xl tracking-tight font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
+                                Shop the best products
+                            </h2>
+                            <p class="mt-3 text-base text-blue-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                Fast delivery to your doorstep with real-time tracking
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div class="rounded-md shadow">
+                                    <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                        Shop Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Featured Products</h2>
+        <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <!-- Product 1 -->
+            <div class="group relative">
+                <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg" alt="Product 1" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div>
+                        <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Wireless Headphones
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">$99.99</p>
+                </div>
+                <button class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group relative">
+                <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" alt="Product 2" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div>
+                        <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Smart Watch
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-500">Silver</p>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">$199.99</p>
+                </div>
+                <button class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group relative">
+                <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    <img src="https://images.pexels.com/photos/214487/pexels-photo-214487.jpeg" alt="Product 3" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div>
+                        <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Coffee Maker
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-500">Stainless Steel</p>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">$149.99</p>
+                </div>
+                <button class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="group relative">
+                <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" alt="Product 4" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div>
+                        <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Bluetooth Speaker
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-500">Red</p>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">$79.99</p>
+                </div>
+                <button class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ShopEasy</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your needs with fast delivery.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
