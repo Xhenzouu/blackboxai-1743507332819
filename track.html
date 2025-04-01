@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order - ShopEasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .timeline-step {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+        .timeline-step.active::before {
+            background: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+        }
+        .timeline-step.completed::before {
+            background: #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">ShopEasy</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Products</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="cart.html" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                    <a href="#" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tracking Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg p-6">
+            <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-6">Track Your Order</h1>
+            
+            <div class="max-w-md mx-auto">
+                <div class="mb-8">
+                    <label for="order-number" class="block text-sm font-medium text-gray-700">Order Number</label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                        <input type="text" id="order-number" class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full rounded-none rounded-l-md sm:text-sm border-gray-300 p-3" placeholder="Enter your order number">
+                        <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Track
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Order Status (Example for order #12345) -->
+                <div id="order-status" class="border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h2 class="text-lg font-medium text-gray-900">Order #12345</h2>
+                            <p class="text-sm text-gray-500">Placed on October 15, 2023</p>
+                        </div>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                            In Transit
+                        </span>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-step completed">
+                            <h3 class="text-base font-medium text-gray-900">Order Placed</h3>
+                            <p class="text-sm text-gray-500">October 15, 2023 at 10:30 AM</p>
+                        </div>
+                        <div class="timeline-step completed">
+                            <h3 class="text-base font-medium text-gray-900">Order Processed</h3>
+                            <p class="text-sm text-gray-500">October 15, 2023 at 2:15 PM</p>
+                        </div>
+                        <div class="timeline-step completed">
+                            <h3 class="text-base font-medium text-gray-900">Shipped</h3>
+                            <p class="text-sm text-gray-500">October 16, 2023 at 9:00 AM</p>
+                        </div>
+                        <div class="timeline-step active">
+                            <h3 class="text-base font-medium text-gray-900">Out for Delivery</h3>
+                            <p class="text-sm text-gray-500">October 17, 2023 at 8:30 AM</p>
+                            <div class="mt-2 p-3 bg-blue-50 rounded-md">
+                                <p class="text-sm text-blue-700">Your order is with our delivery partner and will arrive today between 2:00 PM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <h3 class="text-base font-medium text-gray-900">Delivered</h3>
+                            <p class="text-sm text-gray-500">Expected by October 17, 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Delivery Information</h3>
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                <p class="text-sm text-gray-500">Courier</p>
+                                <p class="text-sm font-medium text-gray-900">ShopEasy Express</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Tracking Number</p>
+                                <p class="text-sm font-medium text-gray-900">SE123456789</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Estimated Delivery</p>
+                                <p class="text-sm font-medium text-gray-900">Today, 2:00 PM - 5:00 PM</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Delivery Address</p>
+                                <p class="text-sm font-medium text-gray-900">123 Main St, Apt 4B<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ShopEasy</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your needs with fast delivery.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Refunds</a></li>
+                        <li><a href="track.html" class="text-gray-400 hover:text-white">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
